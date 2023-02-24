@@ -16,6 +16,7 @@ class CreateInvoicesTable extends Migration
         Schema::create('invoices', function (Blueprint $table) {
             $table->id();
             $table->string('number');
+            $table->unsignedInteger('id_product');
             $table->decimal('total');
             $table->decimal('total_fee');
             $table->timestamps();
