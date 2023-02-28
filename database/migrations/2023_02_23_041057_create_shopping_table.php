@@ -15,6 +15,8 @@ class CreateShoppingTable extends Migration
     {
         Schema::create('shopping', function (Blueprint $table) {
             $table->id();
+            $table->unsignedInteger('id_producto');
+            $table->unsignedInteger('id_user');
             $table->timestamps();
         });
     }

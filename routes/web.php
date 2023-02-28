@@ -14,5 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+    return view('login');
+});
+
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::get('/shopping', 'App\Http\Controllers\ShoppingController@index');
+
+Route::get('/invoices', function () {
+    return view('invoices');
 });

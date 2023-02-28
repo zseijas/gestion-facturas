@@ -13,16 +13,16 @@ class UsersSeeder extends Seeder
      */
     public function run()
     {
-        Users::create([
+        \DB::table('users')->insert([
             'name' => 'zaid',
             'email' => 'zaid@gmail.com',
-            'password' => bcrypt('123456'),
+            'password' => '123456',
         ]);
 
-        Users::create([
+        \DB::table('users')->insert([
             'name' => 'admin',
             'email' => 'admin@gmail.com',
-            'password' => bcrypt('123456'),
+            'password' => '123456',
             'admin' => true,
         ]);
     }
