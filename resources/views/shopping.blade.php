@@ -5,12 +5,12 @@
                 <div class="card-header">{{ __('Shopping') }}</div>
                 <br>
 
-                <form method="POST" action="{{ url('api/shopping') }}">
+                <form method="POST" action="{{ url('api/shopping/buy') }}">
                 
                     <div class="card-body">
-                        <select>
+                        <select name="product" id="product">
                             @foreach ($products as $product)
-                                <option>{{ $product->name }}</option>
+                                <option value="{{$product->id}}">{{ $product->name }}</option>
                             @endforeach
                         </select>
                     </div>

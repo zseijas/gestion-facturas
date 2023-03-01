@@ -22,7 +22,7 @@ Route::get('/login', function () {
     return view('login');
 });
 
-Route::get('/shopping', 'App\Http\Controllers\ShoppingController@index');
+Route::get('/shopping', 'App\Http\Controllers\ShoppingController@index')->name('shopping');
 
 Route::get('/invoices', function () {
     return view('invoices');

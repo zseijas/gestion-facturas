@@ -22,3 +22,6 @@ Route::post('/login', 'App\Http\Controllers\UsersController@login')->name('login
 Route::get('/login', 'App\Http\Controllers\UsersController@index')->name('login');
 // products
 Route::post('/login', 'App\Http\Controllers\UsersController@login')->name('login');
+// shopping
+Route::post('/shopping/buy', 'App\Http\Controllers\ShoppingController@buyingProduct')->name('buying');
+// Route::get('/shopping', 'App\Http\Controllers\ShoppingController@index')->name('shopping');
